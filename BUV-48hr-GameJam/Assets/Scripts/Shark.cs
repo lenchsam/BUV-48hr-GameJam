@@ -32,9 +32,7 @@ public class Shark : MonoBehaviour
     IEnumerator SetBoolToFalseAfterDelay()
     {
         // Wait for 1 second
-        Debug.Log("waiting for 1 second");
         yield return new WaitForSeconds(TimeBetweenDamage);
-        Debug.Log("finished watigin");
         // Set the boolean to false
         attacked = false;
     }
