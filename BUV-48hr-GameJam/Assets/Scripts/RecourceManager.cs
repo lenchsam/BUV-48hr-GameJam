@@ -6,26 +6,30 @@ using Unity.VisualScripting;
 
 public class RecourceManager : MonoBehaviour
 {
-    private int numPlastic = 0;
+    private int numPlasticThisTurn = 0;
     [SerializeField] private TMP_Text plasticText;
 
     // Update is called once per frame
     void Start()
     {
-        numPlastic = 0;
+        numPlasticThisTurn = 0;
         UpdatePlasticText();
     }
     private void UpdatePlasticText()
     {
-        plasticText.text = numPlastic.ToString();
+        plasticText.text = numPlasticThisTurn.ToString();
     }
     public void CollectedPlastic()
     {
-        numPlastic++;
+        numPlasticThisTurn++;
         UpdatePlasticText();
     }
     public void clearPlastic()
     {
-        numPlastic = 0;
+        numPlasticThisTurn = 0;
+    }
+    public int GetPlastic()
+    {
+        return numPlasticThisTurn;
     }
 }
