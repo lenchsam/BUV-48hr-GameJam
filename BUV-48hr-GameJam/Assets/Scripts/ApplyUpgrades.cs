@@ -15,5 +15,8 @@ public class ApplyUpgrades : MonoBehaviour
             vehicleScript.steering += 5 * SO_Upgrades.numOfHandling;
         }
 
+        playerHealth.health += 5 * SO_Upgrades.numOfHealthUpgrades;
+        playerHealth.UpdateHealthText();
+
     }
 }

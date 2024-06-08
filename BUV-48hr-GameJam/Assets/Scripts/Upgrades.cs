@@ -1,40 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Upgrades : MonoBehaviour
 {
-    [SerializeField] Vehicle vehicleScript;
-    [SerializeField] Health playerHealth;
     [SerializeField] NumPlasticScriptablObject SO_Plastic;
     [SerializeField] UpgradeScriptableObject SO_Upgrades;
+    [SerializeField] TMP_Text HandlingNum;
+    [SerializeField] TMP_Text HealthNum;
+    [SerializeField] TMP_Text protectionNum;
+    [SerializeField] TMP_Text collectionAreaNum;
+    [SerializeField] TMP_Text cheaperUpgradesNum;
 
     public void BetterHandling()
     {
-        if(vehicleScript.steering < 160)
-        {
-            vehicleScript.steering += 5;
-            SO_Upgrades.numOfHandling++;
-        }
+        SO_Upgrades.numOfHandling++;
+        HandlingNum.text = SO_Upgrades.numOfHandling.ToString();
     }
-    void moreHealth()
+    public void moreHealth()
     {
-        playerHealth.health += 5;
-        playerHealth.UpdateHealthText();
+        SO_Upgrades.numOfHealthUpgrades++;
+        HealthNum.text = SO_Upgrades.numOfHealthUpgrades.ToString();
     }
-    void protection()
+    public void protection()
     {
-
+        SO_Upgrades.numOfProtection++;
+        protectionNum.text = SO_Upgrades.numOfProtection.ToString();
     }
-    void biggerCollectionArea()
+    public void biggerCollectionArea()
     {
         SO_Upgrades.numOfBiggerCollectableArea++;
+        collectionAreaNum.text = SO_Upgrades.numOfBiggerCollectableArea.ToString();
     }
-    void CheaperUpgrades()
+    public void CheaperUpgrades()
     {
         SO_Upgrades.numOfCheaperUpgrades++;
+        cheaperUpgradesNum.text = SO_Upgrades.numOfCheaperUpgrades.ToString();
     }
-    void Buy(int Price)
+     void Buy(int Price)
     {
         if (SO_Plastic.plasticNumber >= Price)
         {
