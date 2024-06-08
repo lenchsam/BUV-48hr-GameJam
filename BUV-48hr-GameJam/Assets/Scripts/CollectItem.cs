@@ -9,7 +9,7 @@ public class CollectItem : MonoBehaviour
     {
         if (other.gameObject.tag == "Plastic")
         {
-            Debug.Log("ASDFONJASJCBBJSDD");
+            Debug.Log("Collected Item");
             RM.CollectedPlastic();
             Destroy(other.gameObject);
         }

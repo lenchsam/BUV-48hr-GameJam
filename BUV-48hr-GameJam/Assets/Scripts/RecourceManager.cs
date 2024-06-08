@@ -12,6 +12,7 @@ public class RecourceManager : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+        numPlastic = 0;
         UpdatePlasticText();
     }
     private void UpdatePlasticText()
@@ -22,5 +23,9 @@ public class RecourceManager : MonoBehaviour
     {
         numPlastic++;
         UpdatePlasticText();
+    }
+    public void clearPlastic()
+    {
+        numPlastic = 0;
     }
 }

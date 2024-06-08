@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] float health = 100f; // Initial health value
-
+    [SerializeField] TMPro.TMP_Text HealthText;
+    [SerializeField] RecourceManager RM;
+    private void Start()
+    {
+        UpdateHealthText();
+    }
     void OnTriggerEnter(Collider other)
     {
         // Check if the collision is with an environment object
@@ -19,19 +23,23 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        Debug.Log("Health: " + health);
-
+        //Debug.Log("Health: " + health);
+        UpdateHealthText();
         if (health <= 0f)
         {
             Die();
         }
     }
-
+    private void UpdateHealthText()
+    {
+        HealthText.text = health.ToString();
+    }
     void Die()
     {
+
         Debug.Log("Object died.");
         // Add logic for what happens when the object dies
-        // For example: Destroy(gameObject);
+        RM.clearPlastic();
         Destroy(gameObject);
     }
 }
