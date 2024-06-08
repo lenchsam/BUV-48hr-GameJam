@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0738b5e9c13f1a442ac3ab53c23ebb6f, type: 3}
   m_Name: Upgrade
   m_EditorClassIdentifier: 
-  numOfHandling: 0
+  numOfHandling: 15
   numOfBiggerCollectableArea: 0
+  numOfProtection: 0
   numOfCheaperUpgrades: 0
-  numOfHealthUpgrades: 0
+  numOfHealthUpgrades: 14

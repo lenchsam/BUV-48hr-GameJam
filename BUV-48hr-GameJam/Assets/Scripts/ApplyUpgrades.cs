@@ -7,6 +7,7 @@ public class ApplyUpgrades : MonoBehaviour
     [SerializeField] Vehicle vehicleScript;
     [SerializeField] Health playerHealth;
     [SerializeField] UpgradeScriptableObject SO_Upgrades;
+    [SerializeField] SphereCollider SC;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,8 @@ public class ApplyUpgrades : MonoBehaviour
         playerHealth.health += 5 * SO_Upgrades.numOfHealthUpgrades;
         playerHealth.UpdateHealthText();
 
+        //collection area
+        SC.radius += SO_Upgrades.numOfBiggerCollectableArea * 1.2f;
+        Debug.Log(SC.radius);
     }
 }
