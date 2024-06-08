@@ -20,7 +20,10 @@ MonoBehaviour:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-1488470862-0
         - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-1163219601-0
+        - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-664318040-0
         values:
+        - colorIndex: 1
+          iconNameOrGuid: 
         - colorIndex: 1
           iconNameOrGuid: 
         - colorIndex: 1
