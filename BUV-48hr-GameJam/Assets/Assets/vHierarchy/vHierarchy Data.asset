@@ -15,12 +15,34 @@ MonoBehaviour:
   sceneDatas_byGuid:
     keys:
     - 08943f58ae9998b48896fdea4112a0ae
+    - 8bdbd5c3495c05544b0b707b7e28dd89
     values:
     - goDatas_byGlobalId:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-1488470862-0
         - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-1163219601-0
         - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-664318040-0
+        - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-1251319051-0
+        - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-1879856874-0
+        - globalObjectIdString: GlobalObjectId_V1-2-08943f58ae9998b48896fdea4112a0ae-8136317507414142164-5527020938841548887
+        values:
+        - colorIndex: 1
+          iconNameOrGuid: 
+        - colorIndex: 1
+          iconNameOrGuid: 
+        - colorIndex: 1
+          iconNameOrGuid: 
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+        - colorIndex: 0
+          iconNameOrGuid: AvatarMask On Icon
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-8bdbd5c3495c05544b0b707b7e28dd89-1488470862-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8bdbd5c3495c05544b0b707b7e28dd89-1163219601-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8bdbd5c3495c05544b0b707b7e28dd89-664318040-0
         values:
         - colorIndex: 1
           iconNameOrGuid: 
