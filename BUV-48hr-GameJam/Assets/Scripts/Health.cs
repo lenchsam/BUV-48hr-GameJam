@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] float health = 100f; // Initial health value
+    public float health = 100f; // Initial health value
     [SerializeField] TMPro.TMP_Text HealthText;
     [SerializeField] RecourceManager RM;
+    [SerializeField] string sceneToLoad;
     private void Start()
     {
         UpdateHealthText();
@@ -30,7 +32,7 @@ public class Health : MonoBehaviour
             Die();
         }
     }
-    private void UpdateHealthText()
+    public void UpdateHealthText()
     {
         HealthText.text = health.ToString();
     }
@@ -40,6 +42,7 @@ public class Health : MonoBehaviour
         Debug.Log("Object died.");
         // Add logic for what happens when the object dies
         RM.clearPlastic();
-        Destroy(gameObject);
+
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
