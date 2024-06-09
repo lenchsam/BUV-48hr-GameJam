@@ -5919,6 +5919,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3334843360574544372, guid: 50e1f83a2185d7140b161b40c449442f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe52512564e442b4e9360c8e72ec266c, type: 2}
     - target: {fileID: 7688777389879317021, guid: 50e1f83a2185d7140b161b40c449442f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8194,11 +8199,12 @@ MonoBehaviour:
   maxCollection: 5
   maxCheap: 15
   errorText: {fileID: 1767615332}
-  handlingPrice: 0
-  healthPrice: 0
-  protectionPrice: 0
-  collectionPrice: 0
-  CheaperUpgradesPrice: 0
+  plasticText: {fileID: 928634958}
+  handlingPrice: 1
+  healthPrice: 2
+  protectionPrice: 3
+  collectionPrice: 4
+  CheaperUpgradesPrice: 5
 --- !u!1 &2039329954
 GameObject:
   m_ObjectHideFlags: 0

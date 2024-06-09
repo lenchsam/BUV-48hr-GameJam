@@ -19,6 +19,11 @@ public class Shark : MonoBehaviour
 
         var direction = (player.transform.position - transform.position).normalized;
         var targetRotation = Quaternion.LookRotation(direction);
+
+        // Add 90 degrees to the y-axis
+        targetRotation *= Quaternion.Euler(0, 90, 0);
+
+        transform.rotation = targetRotation;
         transform.rotation = targetRotation;
 
         if (Vector3.Distance(transform.position, player.transform.position) < 2 && !attacked)

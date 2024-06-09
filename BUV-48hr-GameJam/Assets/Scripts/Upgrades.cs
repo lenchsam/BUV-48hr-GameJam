@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Upgrades : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Upgrades : MonoBehaviour
     [SerializeField] int maxCollection;
     [SerializeField] int maxCheap;
     [SerializeField] TMP_Text errorText;
+    [SerializeField] TMP_Text plasticText;
     [Header("prices")]
     [SerializeField] private int handlingPrice;
     [SerializeField] private int healthPrice;
@@ -25,6 +27,16 @@ public class Upgrades : MonoBehaviour
     [SerializeField] private int collectionPrice;
     [SerializeField] private int CheaperUpgradesPrice;
 
+    private void Start()
+    {
+        UpdatePlasticText();
+        HandlingNum.text = SO_Upgrades.numOfHandling.ToString();
+        HealthNum.text = SO_Upgrades.numOfHealthUpgrades.ToString();
+        protectionNum.text = SO_Upgrades.numOfProtection.ToString();
+        collectionAreaNum.text = SO_Upgrades.numOfBiggerCollectableArea.ToString();
+        cheaperUpgradesNum.text = SO_Upgrades.numOfCheaperUpgrades.ToString();
+
+    }
     public void BetterHandling()
     {
         if (SO_Upgrades.numOfHandling + 1 < maxHandling)
@@ -33,7 +45,7 @@ public class Upgrades : MonoBehaviour
             {
                 SO_Upgrades.numOfHandling++;
                 HandlingNum.text = SO_Upgrades.numOfHandling.ToString();
-                //take money
+                UpdatePlasticText();
             }
             else
             {
@@ -53,6 +65,7 @@ public class Upgrades : MonoBehaviour
             {
                 SO_Upgrades.numOfHealthUpgrades++;
                 HealthNum.text = SO_Upgrades.numOfHealthUpgrades.ToString();
+                UpdatePlasticText();
             }
             else
             {
@@ -72,6 +85,7 @@ public class Upgrades : MonoBehaviour
             {
                 SO_Upgrades.numOfProtection++;
                 protectionNum.text = SO_Upgrades.numOfProtection.ToString();
+                UpdatePlasticText();
             }
             else
             {
@@ -91,7 +105,7 @@ public class Upgrades : MonoBehaviour
             {
                 SO_Upgrades.numOfBiggerCollectableArea++;
                 collectionAreaNum.text = SO_Upgrades.numOfBiggerCollectableArea.ToString();
-                //take money
+                UpdatePlasticText();
             }
             else
             {
@@ -111,6 +125,7 @@ public class Upgrades : MonoBehaviour
             {
                 SO_Upgrades.numOfCheaperUpgrades++;
                 cheaperUpgradesNum.text = SO_Upgrades.numOfCheaperUpgrades.ToString();
+                UpdatePlasticText();
             }
             else
             {
@@ -127,6 +142,7 @@ public class Upgrades : MonoBehaviour
         if (SO_Plastic.plasticNumber >= Price)
         {
             SO_Plastic.plasticNumber -= Price;
+            UpdatePlasticText();
             return true;
         }
         else
@@ -138,5 +154,10 @@ public class Upgrades : MonoBehaviour
     {
         errorText.gameObject.SetActive(true);
         errorText.text = text;
+    }
+    void UpdatePlasticText()
+    {
+        plasticText.gameObject.SetActive(true);
+        plasticText.text = SO_Plastic.plasticNumber.ToString();
     }
 }
