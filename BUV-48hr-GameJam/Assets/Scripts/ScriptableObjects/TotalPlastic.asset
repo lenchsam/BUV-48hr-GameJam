@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56127c687a05cb46966dcb3f07ad630, type: 3}
   m_Name: TotalPlastic
   m_EditorClassIdentifier: 
-  plasticNumber: 0
+  plasticNumber: 10

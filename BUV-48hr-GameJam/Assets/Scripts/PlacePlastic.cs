@@ -48,7 +48,20 @@ public class PlacePlastic : MonoBehaviour
 
         // Instantiate the object at the random position and add it to the list
         GameObject newObject = Instantiate(objectToPlace, randomPosition, Quaternion.identity);
+
+        // Randomize the color of the new object
+        RandomizeColor(newObject);
+
         spawnedObjects.Add(newObject);
+    }
+
+    void RandomizeColor(GameObject obj)
+    {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material.color = new Color(Random.value, Random.value, Random.value);
+        }
     }
 
     public void RemoveObject(GameObject obj)
@@ -70,6 +83,12 @@ public class PlacePlastic : MonoBehaviour
                 closestDistance = distance;
                 closestObject = obj;
             }
+        }
+
+        // Output the closest object for debugging
+        if (closestObject != null)
+        {
+            Debug.Log("Closest Object to Player: " + closestObject.name + " at distance: " + closestDistance);
         }
     }
 

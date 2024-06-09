@@ -42,11 +42,11 @@ public class Upgrades : MonoBehaviour
         collectionAreaNum.text = SO_Upgrades.numOfBiggerCollectableArea.ToString();
         cheaperUpgradesNum.text = SO_Upgrades.numOfCheaperUpgrades.ToString();
 
-        HandlingText.text = handlingPrice.ToString();
-        HealthText.text = healthPrice.ToString();
-        protectionText.text = protectionPrice.ToString();
-        CollectionAreaText.text = collectionPrice.ToString();
-        ChepaerUpgradesText.text = CheaperUpgradesPrice.ToString();
+        HandlingText.text = (handlingPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+        HealthText.text = (healthPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+        protectionText.text = (protectionPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+        CollectionAreaText.text = (collectionPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+        ChepaerUpgradesText.text = (CheaperUpgradesPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
 
 
     }
@@ -138,6 +138,11 @@ public class Upgrades : MonoBehaviour
             {
                 SO_Upgrades.numOfCheaperUpgrades++;
                 cheaperUpgradesNum.text = SO_Upgrades.numOfCheaperUpgrades.ToString();
+                HandlingText.text = (handlingPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+                HealthText.text = (healthPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+                protectionText.text = (protectionPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+                CollectionAreaText.text = (collectionPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
+                ChepaerUpgradesText.text = (CheaperUpgradesPrice - SO_Upgrades.numOfCheaperUpgrades).ToString();
                 UpdatePlasticText();
             }
             else
@@ -152,6 +157,7 @@ public class Upgrades : MonoBehaviour
     }
     private bool Buy(int Price)
     {
+        Price -= SO_Upgrades.numOfCheaperUpgrades;
         if (SO_Plastic.plasticNumber >= Price)
         {
             SO_Plastic.plasticNumber -= Price;

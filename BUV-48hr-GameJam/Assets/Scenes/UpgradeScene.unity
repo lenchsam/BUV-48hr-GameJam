@@ -8881,17 +8881,22 @@ MonoBehaviour:
   collectionAreaNum: {fileID: 1500443829}
   cheaperUpgradesNum: {fileID: 1637213731}
   maxHandling: 22
-  maxHealth: 15
-  maxprotection: 15
+  maxHealth: 100
+  maxprotection: 5
   maxCollection: 5
-  maxCheap: 15
+  maxCheap: 3
   errorText: {fileID: 1767615332}
   plasticText: {fileID: 928634958}
-  handlingPrice: 1
-  healthPrice: 2
-  protectionPrice: 3
-  collectionPrice: 4
-  CheaperUpgradesPrice: 5
+  handlingPrice: 5
+  healthPrice: 5
+  protectionPrice: 7
+  collectionPrice: 5
+  CheaperUpgradesPrice: 7
+  HandlingText: {fileID: 1819947809}
+  HealthText: {fileID: 126309853}
+  protectionText: {fileID: 1237693499}
+  CollectionAreaText: {fileID: 1541753691}
+  ChepaerUpgradesText: {fileID: 93528332}
 --- !u!1 &2039329954
 GameObject:
   m_ObjectHideFlags: 0

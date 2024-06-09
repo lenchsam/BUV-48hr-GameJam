@@ -39,7 +39,7 @@ public class Health : MonoBehaviour
     void Die()
     {
 
-        Debug.Log("Object died.");
+        //Debug.Log("Object died.");
         // Add logic for what happens when the object dies
         RM.clearPlastic();
 

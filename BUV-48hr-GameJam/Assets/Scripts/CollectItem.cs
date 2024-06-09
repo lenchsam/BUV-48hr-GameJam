@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 
 public class CollectItem : MonoBehaviour
@@ -16,7 +17,7 @@ public class CollectItem : MonoBehaviour
     {
         if (other.gameObject.tag == "Plastic")
         {
-            Debug.Log("Collected Item");
+            //Debug.Log("Collected Item");
             RM.CollectedPlastic();
             randomPlacer.RemoveObject(other.gameObject);
             Destroy(other.gameObject);
