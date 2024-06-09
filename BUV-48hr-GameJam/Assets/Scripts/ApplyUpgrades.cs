@@ -20,7 +20,6 @@ public class ApplyUpgrades : MonoBehaviour
         playerHealth.UpdateHealthText();
 
         //collection area
-        SC.radius += SO_Upgrades.numOfBiggerCollectableArea * 1.2f;
-        Debug.Log(SC.radius);
+        SC.radius += SO_Upgrades.numOfBiggerCollectableArea * 1.05f;
     }
 }

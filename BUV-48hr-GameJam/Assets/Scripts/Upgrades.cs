@@ -26,6 +26,12 @@ public class Upgrades : MonoBehaviour
     [SerializeField] private int protectionPrice;
     [SerializeField] private int collectionPrice;
     [SerializeField] private int CheaperUpgradesPrice;
+    [Header("prices text")]
+    [SerializeField] TMP_Text HandlingText;
+    [SerializeField] TMP_Text HealthText;
+    [SerializeField] TMP_Text protectionText;
+    [SerializeField] TMP_Text CollectionAreaText;
+    [SerializeField] TMP_Text ChepaerUpgradesText;
 
     private void Start()
     {
@@ -35,6 +41,13 @@ public class Upgrades : MonoBehaviour
         protectionNum.text = SO_Upgrades.numOfProtection.ToString();
         collectionAreaNum.text = SO_Upgrades.numOfBiggerCollectableArea.ToString();
         cheaperUpgradesNum.text = SO_Upgrades.numOfCheaperUpgrades.ToString();
+
+        HandlingText.text = handlingPrice.ToString();
+        HealthText.text = healthPrice.ToString();
+        protectionText.text = protectionPrice.ToString();
+        CollectionAreaText.text = collectionPrice.ToString();
+        ChepaerUpgradesText.text = CheaperUpgradesPrice.ToString();
+
 
     }
     public void BetterHandling()
